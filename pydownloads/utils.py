@@ -1,14 +1,8 @@
-import requests
-
-
-class API:
-    URL = 'https://api.pepy.tech/api/v2/projects/{}'
-    HEADERS = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}
-
-    def request(self, package_name):
-        response = requests.get(
-            url=self.URL.format(package_name),
-            headers=self.HEADERS
-        )
-        return response
+class Utils:
+    def response_data(self, data, key):
+        if data.status_code == 200:
+            return data.json().get(
+                key, 'No data available. Data is updated at 01:00 UTC')
+        else:
+            return data.json().get(
+                'message', 'Internal Server Error')
