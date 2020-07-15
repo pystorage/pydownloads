@@ -2,6 +2,11 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/pystorage/pydownloads/master/docs/source/images/logo.png" alt="PyDownloads">
 </p>
+
+![PyPI](https://img.shields.io/pypi/v/pydownloads)
+[![Downloads](https://pepy.tech/badge/pydownloads)](https://pepy.tech/project/pydownloads)
+![GitHub](https://img.shields.io/github/license/pystorage/pydownloads)
+
 </div>
 
 ## Installation
